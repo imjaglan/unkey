@@ -49,7 +49,7 @@ export const Filters: React.FC = () => {
       history: "push",
       shallow: false, // otherwise server components won't notice the change
       clearOnDefault: true,
-    }),
+    })
   );
   const [success, setSuccess] = useQueryState(
     "success",
@@ -57,7 +57,7 @@ export const Filters: React.FC = () => {
       history: "push",
       shallow: false, // otherwise server components won't notice the change
       clearOnDefault: true,
-    }),
+    })
   );
 
   const [after, setAfter] = useQueryState(
@@ -66,7 +66,7 @@ export const Filters: React.FC = () => {
       history: "push",
       shallow: false,
       clearOnDefault: true,
-    }),
+    })
   );
 
   const [before, setBefore] = useQueryState(
@@ -75,7 +75,7 @@ export const Filters: React.FC = () => {
       history: "push",
       shallow: false,
       clearOnDefault: true,
-    }),
+    })
   );
 
   const [identifierVisible, setIdentifierVisible] = useState(false);
@@ -261,7 +261,7 @@ const FilterRow: React.FC<{
   removeFilter: () => void;
 }> = ({ title, selected, setSelected, removeFilter }) => {
   return (
-    <div className="flex items-center w-full gap-2">
+    <div className="flex items-end  w-full gap-2">
       <ArrayInput title={title} selected={selected} setSelected={setSelected} />
       <Button shape="square" onClick={removeFilter}>
         <X className="w-4 h-4" />
